@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VEINTIUNO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="mesa-tablero">
+        
+        <div class="controles">
+            <button class="btn btn-nuevo">Juego Nuevo</button>
+            <button class="btn btn-pedir">Pedir Carta</button>
+            <button class="btn btn-parar">Parar</button>
+        </div>
+
+        <div class="area-juego">
+            
+            <section class="zona-jugador">
+                <h2>Jugador <span class="puntos">0</span></h2>
+                <div class="cartas-contenedor" id="jugador-cartas">
+                    </div>
+            </section>
+
+            <section class="zona-pc">
+                <h2>PC <span class="puntos">0</span></h2>
+                <div class="cartas-contenedor" id="pc-cartas">
+                    </div>
+            </section>
+
+        </div>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

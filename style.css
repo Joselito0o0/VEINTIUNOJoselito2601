@@ -1,0 +1,41 @@
+/* ==========================================
+   ZONAS DE JUEGO ACTUALIZADAS PARA IMÁGENES
+   ========================================== */
+
+/* Ajustamos el contenedor para dar soporte y espacio a las imágenes */
+.cartas-contenedor {
+    min-height: 180px; /* Un poco más alto para albergar las imágenes con comodidad */
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 2px dashed rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Si hay demasiadas cartas, bajarán limpiamente a otra línea */
+}
+
+/* ==========================================
+   ESTILOS PARA LAS IMÁGENES DE LAS CARTAS
+   ========================================== */
+.carta-imagen {
+    width: 105px;         /* Dimensión de ancho perfecta para el tablero */
+    height: auto;         /* Respeta la proporción vertical original del naipe */
+    border-radius: 6px;   /* Suaviza las esquinas de los archivos de imagen */
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.5); /* Sombra intensa para realzar relieve */
+    animation: aparecerCarta 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Efecto pop-in */
+    user-select: none;    /* Previene que el usuario arrastre la imagen sin querer */
+}
+
+/* Animación que simula el lanzamiento de la carta al tapete */
+@keyframes aparecerCarta {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.8) rotate(-3deg);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotate(0deg);
+    }
+}
